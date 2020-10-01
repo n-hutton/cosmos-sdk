@@ -2,6 +2,7 @@ package staking
 
 import (
 	"time"
+	"fmt"
 
 	"github.com/armon/go-metrics"
 	gogotypes "github.com/gogo/protobuf/types"
@@ -83,8 +84,9 @@ func handleMsgCreateValidator(ctx sdk.Context, msg types.MsgCreateValidator, k k
 	}
 
 	if msg.MinSelfDelegation.LT(k.MinSelfDelegation(ctx)) {
-		return nil, sdkerrors.Wrapf(ErrMinSelfDelegationInsufficient,
-			"got: %s, valid: %s", msg.MinSelfDelegation, k.MinSelfDelegation(ctx))
+		fmt.Printf("would have complained here!\n") // DELETEME_NH
+	//	return nil, sdkerrors.Wrapf(ErrMinSelfDelegationInsufficient,
+	//		"got: %s, valid: %s", msg.MinSelfDelegation, k.MinSelfDelegation(ctx))
 	}
 	validator.MinSelfDelegation = msg.MinSelfDelegation
 
