@@ -84,9 +84,9 @@ func handleMsgCreateValidator(ctx sdk.Context, msg types.MsgCreateValidator, k k
 	}
 
 	if msg.MinSelfDelegation.LT(k.MinSelfDelegation(ctx)) {
-		fmt.Printf("would have complained here!\n") // DELETEME_NH
-	//	return nil, sdkerrors.Wrapf(ErrMinSelfDelegationInsufficient,
-	//		"got: %s, valid: %s", msg.MinSelfDelegation, k.MinSelfDelegation(ctx))
+		fmt.Printf("this is complaining!!! would have complained here!\n") // DELETEME_NH
+		return nil, sdkerrors.Wrapf(ErrMinSelfDelegationInsufficient,
+			"got: %s, valid: %s", msg.MinSelfDelegation, k.MinSelfDelegation(ctx))
 	}
 	validator.MinSelfDelegation = msg.MinSelfDelegation
 
