@@ -214,14 +214,14 @@ func validateBondDenom(i interface{}) error {
 }
 
 func validateMinSelfDelegation(i interface{}) error {
-	v, ok := i.(sdk.Int)
-	if !ok {
-		return fmt.Errorf("invalid parameter type: %T", i)
-	}
+	//v, ok := i.(sdk.Int)
+	//if !ok {
+	//	return fmt.Errorf("invalid parameter type: %T", i)
+	//}
 
-	if v.LT(sdk.ZeroInt()) {
-		return fmt.Errorf("min self delegation cannot be less than 0: %s", v)
-	}
+	//if v.LT(sdk.ZeroInt()) {
+	//	return fmt.Errorf("min self delegation cannot be less than 0: %s", v)
+	//}
 
 	return nil
 }
