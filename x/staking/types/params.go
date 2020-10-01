@@ -33,7 +33,7 @@ const (
 var (
 	// DefaultMinSelfDelegation is the minimum allowed self delegation when creating
 	// a new validator. At the moment set equal to 1 consensus power
-	DefaultMinSelfDelegation = sdk.PowerReduction
+	DefaultMinSelfDelegation = sdk.OneInt()
 )
 
 // nolint - Keys for parameter access
