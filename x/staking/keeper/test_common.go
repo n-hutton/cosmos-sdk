@@ -30,19 +30,12 @@ import (
 // dummy addresses used for testing
 // nolint:unused, deadcode
 var (
-	Addrs = createTestAddrs(500)
-	PKs   = createTestPubKeys(500)
+	Addrs = createTestAddrs(0)
+	PKs   = createTestPubKeys(0)
 
 	addrDels = []sdk.AccAddress{
-		Addrs[0],
-		Addrs[1],
 	}
 	addrVals = []sdk.ValAddress{
-		sdk.ValAddress(Addrs[2]),
-		sdk.ValAddress(Addrs[3]),
-		sdk.ValAddress(Addrs[4]),
-		sdk.ValAddress(Addrs[5]),
-		sdk.ValAddress(Addrs[6]),
 	}
 )
 
